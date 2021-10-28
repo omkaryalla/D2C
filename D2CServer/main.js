@@ -7,7 +7,7 @@ const {constructSeatLayout, getEmptySeats, getSeatsToBook} = require("./seatMana
 const app = express()
 app.use(express.json())
 app.use(cors())
-const port = 8080
+const port = 3000
 
 const uri =
   "mongodb+srv://app_server:serverman@cluster0.l5jkx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
