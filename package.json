@@ -1,0 +1,23 @@
+{
+  "name": "d2cserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm install\nnode main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omkaryalla/D2CServer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/omkaryalla/D2CServer/issues"
+  },
+  "homepage": "https://github.com/omkaryalla/D2CServer#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
