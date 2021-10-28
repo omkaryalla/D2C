@@ -1,11 +1,13 @@
 
 const express = require('express')
+var cors = require('cors')
 const { MongoClient } = require("mongodb");
 const {constructSeatLayout, getEmptySeats, getSeatsToBook} = require("./seatManager")
 
 const app = express()
 app.use(express.json())
-const port = 3000
+app.use(cors())
+const port = 8080
 
 const uri =
   "mongodb+srv://app_server:serverman@cluster0.l5jkx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
