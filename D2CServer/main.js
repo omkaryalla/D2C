@@ -1,6 +1,7 @@
-
+var fs = require('fs')
 const express = require('express')
 var cors = require('cors')
+var https = require('https')
 const { MongoClient } = require("mongodb");
 const {constructSeatLayout, getEmptySeats, getSeatsToBook} = require("./seatManager")
 
@@ -63,7 +64,10 @@ async function run(){
   await client.connect();
   const database = client.db('train_reservation');
   app.locals.seats = database.collection('seats');
-  app.listen(port, "0.0.0.0", () => {
+  https.createServer({
+    key: fs.readFileSync('server.key'),
+    cert: fs.readFileSync('server.cert')
+  }, app).listen(port, "0.0.0.0", () => {
     console.log(`Example app listening at http://localhost:${port}`)
   })
 }
